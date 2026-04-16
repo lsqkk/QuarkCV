@@ -1,0 +1,43 @@
+name: Zhu Enze
+title: Undergraduate Student
+position: Undergraduate Student
+affiliation: Xi'an Jiaotong University
+location: Xi'an, China
+phone: "+86 13092344080"
+email: jsxzznz@163.com
+tagline: Intelligent Systems, Software Engineering, and Embedded Development
+
+google_scholar: https://scholar.google.com.hk/citations?hl=zh-CN&pli=1&user=t_HxDtcAAAAJ
+cv_link: https://lsqkk.github.io/academic-homepage/assets/files/Zhu_Enze_s_Resume_en_.pdf
+github_link: https://github.com/lsqkk/
+homepage_link: https://lsqkk.github.io
+
+contact_links:
+  - label: Homepage
+    url: https://lsqkk.github.io
+  - label: GitHub
+    url: https://github.com/lsqkk/
+  - label: Google Scholar
+    url: https://scholar.google.com.hk/citations?hl=zh-CN&pli=1&user=t_HxDtcAAAAJ
+  - label: CV
+    url: https://lsqkk.github.io/academic-homepage/assets/files/Zhu_Enze_s_Resume_en_.pdf
+
+theme:
+  accent_color: "1F4E79"
+  accent_soft_color: "EAF2F8"
+
+section_visibility:
+  about: true
+  education: true
+  projects: true
+  awards: true
+  publications: false
+  services: false
+  skills: true
+
+list_preview_count:
+  projects: 2
+  awards: 2
+  publications: 2
+
+avatar: https://lsqkk.github.io/academic-homepage/assets/img/avatar.jpg
