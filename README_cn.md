@@ -29,7 +29,7 @@
 ## 项目结构
 
 ```
-resume/
+QuarkCV/
 ├─ Data/
 │  ├─ _config.yml
 │  ├─ profile.yml

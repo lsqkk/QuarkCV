@@ -29,7 +29,7 @@ The result is a workflow where `main.tex` is a generated artifact and `Data/*.ym
 ## Project Structure
 
 ```
-resume/
+QuarkCV/
 ├─ Data/
 │  ├─ _config.yml
 │  ├─ profile.yml
