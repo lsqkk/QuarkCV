@@ -14,7 +14,7 @@ homepage_link: https://lsqkk.github.io
 
 contact_links:
   - label: Homepage
-    url: https://lsqkk.github.io
+    url: https://lsqkk.github.io/academic-homepage
   - label: GitHub
     url: https://github.com/lsqkk/
   - label: Google Scholar
@@ -23,8 +23,8 @@ contact_links:
     url: https://lsqkk.github.io/academic-homepage/assets/files/Zhu_Enze_s_Resume_en_.pdf
 
 theme:
-  accent_color: "1F4E79"
-  accent_soft_color: "EAF2F8"
+  accent_color: "245C73"
+  accent_soft_color: "EDF5F4"
 
 section_visibility:
   about: true

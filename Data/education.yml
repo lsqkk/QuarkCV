@@ -4,6 +4,12 @@ main:
     period: Sept. 2025 - Present
     start_date: 2025-09-01
     focus: Full undergraduate study in automation, intelligent systems, and engineering fundamentals.
+    resume_summary: Full undergraduate training in automation, control, software, and intelligent systems.
+    resume_highlights:
+      - Programming in C (100/100)
+      - Principles of Automatic Control
+      - Engineering Mathematics
+      - Intelligent Systems
     summary: Currently pursuing formal undergraduate training with an emphasis on control, software, and interdisciplinary engineering practice.
     link: https://automation.xjtu.edu.cn
     highlights:
@@ -17,6 +23,12 @@ main:
     period: Sept. 2023 - Jun. 2025
     start_date: 2023-09-01
     focus: Accelerated preparatory training bridging advanced pre-college coursework and early undergraduate practice.
+    resume_summary: Accelerated preparatory training with early exposure to research, project practice, and competition-based learning.
+    resume_highlights:
+      - Early research training
+      - Project-based learning
+      - Competition experience
+      - Independent development
     summary: Completed prerequisite coursework ahead of schedule, explored AI and software projects independently, maintained a technical blog, and built an early record in competitions and software copyrights.
     link: https://bjb.xjtu.edu.cn/info/1071/1237.htm
     highlights:

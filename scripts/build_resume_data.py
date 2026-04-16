@@ -13,8 +13,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "Data"
-OUTPUT_DIR = DATA_DIR / "generated"
-AVATAR_CACHE_DIR = ROOT / ".output"
+MAIN_TEX = ROOT / "main.tex"
+AVATAR_CACHE_DIR = ROOT / "Data"
 
 
 def load_yaml(name: str) -> dict[str, Any]:
@@ -169,18 +169,12 @@ def render_header(config: dict[str, Any], profile: dict[str, Any]) -> str:
 
 def render_about(profile: dict[str, Any]) -> str:
     about = profile.get("about") or {}
-    focus = about.get("focus_areas") or []
-    lead = collapse_sentence(about.get("lead", ""), 150)
-    focus_sentence = ""
+    summary = clean_markup(about.get("resume_summary") or about.get("lead") or about.get("summary", ""))
+    focus = about.get("resume_focus") or about.get("focus_areas") or []
+    content = [rf"\resumeSummary{{{latex_escape(summary)}}}"]
     if focus:
-        focus_sentence = "Focused on " + ", ".join(clean_markup(item) for item in focus[:4]) + "."
-    else:
-        focus_sentence = collapse_sentence(about.get("summary", ""), 150)
-    sentence = " ".join(part for part in [lead, focus_sentence] if part).strip()
-    content = [rf"\resumeSummary{{{latex_escape(sentence)}}}"]
-    if focus:
-        tags = " ".join(rf"\resumeTag{{{latex_escape(item)}}}" for item in focus[:5])
-        content.append(tags)
+        focus_line = r" \textcolor{ResumeTextMuted}{\textbullet} ".join(latex_escape(clean_markup(item)) for item in focus[:5])
+        content.append(rf"\resumeFocusLine{{{focus_line}}}")
     return "\n".join(content)
 
 
@@ -190,23 +184,25 @@ def render_education(entries: list[dict[str, Any]]) -> str:
         school = href(item.get("link", ""), item.get("school", ""))
         program = latex_escape(item.get("program", ""))
         period = latex_escape(item.get("period", ""))
-        focus = latex_escape(collapse_sentence(item.get("focus", ""), 130))
-        blocks.append(rf"\resumeEntry{{{school}}}{{{program}}}{{{period}}}{{{focus}}}")
-        highlights = item.get("highlights") or []
+        summary = latex_escape(clean_markup(item.get("resume_summary") or item.get("focus", "")))
+        highlights = item.get("resume_highlights") or item.get("highlights") or []
         if highlights:
-            blocks.append(r"\resumeBulletsStart")
-            for bullet in highlights[:3]:
-                blocks.append(rf"\resumeBullet{{{latex_escape(clean_markup(bullet))}}}")
-            blocks.append(r"\resumeBulletsEnd")
-        blocks.append(r"\vspace{0.45em}")
+            inline_highlights = r" \textcolor{ResumeTextMuted}{|} ".join(
+                latex_escape(clean_markup(bullet)) for bullet in highlights[:4]
+            )
+            detail = summary + r" \textcolor{ResumeTextMuted}{|} " + inline_highlights if summary else inline_highlights
+        else:
+            detail = summary
+        blocks.append(rf"\resumeEntry{{{school}}}{{{program}}}{{{period}}}{{{detail}}}")
+        blocks.append(r"\vspace{0.58em}")
     return "\n".join(blocks[:-1] if blocks else blocks)
 
 
 def project_bullets(item: dict[str, Any]) -> list[str]:
     bullets: list[str] = []
-    description = item.get("description")
+    description = item.get("resume_summary") or item.get("description")
     if description:
-        bullets.append(collapse_sentence(description, 170))
+        bullets.append(clean_markup(description))
     tech = clean_markup(item.get("tech_stack", ""))
     outcome = clean_markup(item.get("outcome", ""))
     tail_parts = []
@@ -219,19 +215,10 @@ def project_bullets(item: dict[str, Any]) -> list[str]:
     return bullets[:2]
 
 
-def project_display_title(title: str) -> str:
-    normalized = clean_markup(title)
-    if " with " in normalized:
-        normalized = normalized.split(" with ", 1)[0]
-    if " and " in normalized and len(normalized) > 52:
-        normalized = normalized.split(" and ", 1)[0]
-    return normalized
-
-
 def render_projects(entries: list[dict[str, Any]], limit: int) -> str:
     blocks: list[str] = []
     for item in sort_by_start_date(entries, "date")[:limit]:
-        title = href(item.get("link", ""), project_display_title(item.get("title", "")))
+        title = href(item.get("link", ""), item.get("resume_title") or item.get("title", ""))
         subtitle_parts = [item.get("attribute", ""), item.get("tech_stack", "")]
         subtitle = " | ".join(part for part in subtitle_parts if part)
         period = format_date_label(item.get("date"))
@@ -285,7 +272,7 @@ def render_skills(profile: dict[str, Any]) -> str:
 
 
 def render_section(title: str, body: str) -> str:
-    return wrap_command(rf"\resumeSectionBlock{{\section{{{latex_escape(title)}}}}}{{{body}}}")
+    return wrap_command(rf"\resumeSectionBlock{{\resumeSectionTitle{{{latex_escape(title)}}}}}{{{body}}}")
 
 
 def build_body() -> str:
@@ -323,10 +310,21 @@ def build_body() -> str:
     return "\n\n".join(parts) + "\n"
 
 
+def build_document() -> str:
+    body = build_body().rstrip()
+    return (
+        "% This file is auto-generated by scripts/build_resume_data.py.\n"
+        "% Do not edit main.tex directly; update Data/*.yml instead.\n"
+        "\\documentclass[a4paper,10pt]{article}\n"
+        "\\usepackage{myresume}\n\n"
+        "\\begin{document}\n"
+        f"{body}\n"
+        "\\end{document}\n"
+    )
+
+
 def main() -> None:
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output = OUTPUT_DIR / "resume-body.tex"
-    output.write_text(build_body(), encoding="utf-8")
+    MAIN_TEX.write_text(build_document(), encoding="utf-8")
 
 
 if __name__ == "__main__":

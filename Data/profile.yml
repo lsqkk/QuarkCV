@@ -1,6 +1,13 @@
 about:
   lead: I am Zhu Enze, a 2025 undergraduate student in the School of Automation at Xi'an Jiaotong University and a member of the 2023 class of the Young Gifted Program.
   summary: My focus lies at the intersection of intelligent systems and software engineering, with a proven ability to solve practical problems through independent development and project implementation. My interests span machine learning, embedded systems, and full-stack application development.
+  resume_summary: I am Zhu Enze, a 2025 undergraduate student in the School of Automation at Xi'an Jiaotong University and a member of the 2023 class of the Young Gifted Program, with interests spanning intelligent systems, machine learning, software engineering, and embedded development.
+  resume_focus:
+    - Intelligent systems
+    - Machine learning
+    - Software engineering
+    - Embedded development
+    - Full-stack applications
   focus_areas:
     - Intelligent systems
     - Machine learning & Deep learning

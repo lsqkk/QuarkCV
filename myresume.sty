@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 
-\usepackage[a4paper,top=1.15cm,bottom=1.45cm,left=1.55cm,right=1.55cm]{geometry}
+\usepackage[a4paper,top=1.2cm,bottom=1.65cm,left=1.65cm,right=1.65cm]{geometry}
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{fontspec}
@@ -43,11 +43,12 @@
   UprightFont=*-Regular
 ]
 
-\definecolor{ResumeAccent}{HTML}{1F4E79}
-\definecolor{ResumeAccentSoft}{HTML}{EAF2F8}
-\definecolor{ResumeTextMuted}{HTML}{5C6470}
-\definecolor{ResumeRule}{HTML}{D7DFE7}
-\definecolor{ResumeHeading}{HTML}{1A1F2B}
+\definecolor{ResumeAccent}{HTML}{245C73}
+\definecolor{ResumeAccentSoft}{HTML}{EDF5F4}
+\definecolor{ResumeTextMuted}{HTML}{5B6470}
+\definecolor{ResumeRule}{HTML}{D9E1E6}
+\definecolor{ResumeHeading}{HTML}{16202A}
+\definecolor{ResumePanel}{HTML}{F7FAFB}
 
 \hypersetup{
   colorlinks=true,
@@ -55,11 +56,6 @@
   linkcolor=ResumeAccent,
   pdfborder={0 0 0}
 }
-
-\titleformat{\section}
-  {\CronosLt\fontsize{12.6pt}{12.6pt}\selectfont\scshape\raggedright\color{ResumeHeading}}
-  {}{0pt}{}
-\titlespacing*{\section}{0pt}{0pt}{0pt}
 
 \newcommand{\resumeSetAccent}[2]{%
   \definecolor{ResumeAccent}{HTML}{#1}%
@@ -76,22 +72,19 @@
   \par\noindent\color{ResumeRule}\rule{\textwidth}{0.7pt}\color{black}\par
 }
 
-\newcommand{\resumeTag}[1]{%
-  \begingroup
-  \setlength{\fboxsep}{5pt}%
-  \colorbox{ResumeAccentSoft}{\textcolor{ResumeAccent}{\footnotesize #1}}%
-  \endgroup
+\newcommand{\resumeSectionTitle}[1]{%
+  {\CronosLt\fontsize{12.7pt}{14pt}\selectfont\scshape\textcolor{ResumeHeading}{#1}}\par
 }
 
 \newcommand{\resumeSectionBlock}[2]{%
-  \vspace{0.82em}%
+  \vspace{1.05em}%
   \noindent
   \begin{minipage}[t]{0.18\textwidth}
-    \raggedright #1
+    \vspace{0pt}\raggedright #1
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.78\textwidth}
-    \raggedright #2
+    \vspace{0pt}\raggedright #2
   \end{minipage}\par
 }
 
@@ -125,36 +118,47 @@
   \hfill
   \begin{minipage}[c]{0.79\textwidth}
     {\Calluna\fontsize{27pt}{27pt}\selectfont\textcolor{ResumeHeading}{#2}}\par
-    \vspace{0.2em}
+    \vspace{0.28em}
     {\CronosLt\fontsize{12.2pt}{12.2pt}\selectfont\textcolor{ResumeAccent}{#3}}\par
-    \vspace{0.45em}
-    {\small\color{ResumeTextMuted}#4}\par
-    \vspace{0.45em}
-    {\small #5}\par
-    \vspace{0.25em}
-    {\small #6}
+    \vspace{0.55em}
+    {\small\setstretch{1.16}\color{ResumeTextMuted}#4}\par
+    \vspace{0.5em}
+    {\small\setstretch{1.14}#5}\par
+    \vspace{0.34em}
+    {\small\setstretch{1.14}#6}
   \end{minipage}\par
-  \vspace{0.9em}
+  \vspace{1em}
   \resumeDivider
 }
 
 \newcommand{\resumeSummary}[1]{%
-  \setstretch{1.08}\justifying #1\par
+  {\small\setstretch{1.22}\RaggedRight #1\par}
 }
 
 \newcommand{\resumeEntry}[4]{%
   \begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{3.15cm}@{}}
-    {\textbf{#1}\ifx&#2&\else\\[-0.2em]\textit{\small #2}\fi} & {\small\textcolor{ResumeTextMuted}{#3}} \\
+    {\textbf{#1}\ifx&#2&\else\\[0.08em]{\small\itshape\textcolor{ResumeTextMuted}{#2}}\fi} & {\small\textcolor{ResumeTextMuted}{#3}} \\
   \end{tabularx}
   \ifx&#4&\else
-    {\small\color{ResumeTextMuted}#4}\par
+    \vspace{0.18em}
+    {\small\setstretch{1.16}\color{ResumeTextMuted}#4\par}
   \fi
 }
 
-\newcommand{\resumeBulletsStart}{\begin{itemize}[leftmargin=1.1em,itemsep=0.18em,topsep=0.28em,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeMetaLine}[1]{%
+  \vspace{0.22em}
+  {\small\setstretch{1.16}\RaggedRight\textcolor{ResumeTextMuted}{#1}\par}
+}
+
+\newcommand{\resumeFocusLine}[1]{%
+  \vspace{0.48em}
+  {\small\setstretch{1.16}\RaggedRight\textcolor{ResumeAccent}{#1}\par}
+}
+
+\newcommand{\resumeBulletsStart}{\begin{itemize}[leftmargin=1.15em,itemsep=0.3em,topsep=0.42em,parsep=0pt,partopsep=0pt]}
 \newcommand{\resumeBulletsEnd}{\end{itemize}}
 \newcommand{\resumeBullet}[1]{\item \small #1}
 
-\newcommand{\resumeCompactListStart}{\begin{itemize}[leftmargin=0pt,label={},itemsep=0.26em,topsep=0.2em,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeCompactListStart}{\begin{itemize}[leftmargin=0pt,label={},itemsep=0.42em,topsep=0.24em,parsep=0pt,partopsep=0pt]}
 \newcommand{\resumeCompactListEnd}{\end{itemize}}
 \newcommand{\resumeCompactItem}[1]{\item \small #1}
