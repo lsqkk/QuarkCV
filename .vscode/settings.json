@@ -1,0 +1,31 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "MyXelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=.output",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "MyBibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "myXeLaTeX",
+            "tools": [
+                "MyXelatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.recipe.default": "myXeLaTeX"
+}
