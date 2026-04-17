@@ -111,9 +111,15 @@ def join_links(links: list[str]) -> str:
 
 
 def maybe_download_avatar(avatar_ref: str | None) -> tuple[str | None, str]:
-    initials = "ZE"
+    initials = "CV"
     if not avatar_ref:
         return None, initials
+    local_candidate = (ROOT / avatar_ref).resolve() if not Path(avatar_ref).is_absolute() else Path(avatar_ref)
+    if local_candidate.exists():
+        try:
+            return local_candidate.relative_to(ROOT).as_posix(), initials
+        except ValueError:
+            return local_candidate.as_posix(), initials
     parsed = urllib.parse.urlparse(avatar_ref)
     if parsed.scheme in {"http", "https"}:
         extension = Path(parsed.path).suffix or ".jpg"
@@ -124,17 +130,15 @@ def maybe_download_avatar(avatar_ref: str | None) -> tuple[str | None, str]:
             return target.relative_to(ROOT).as_posix(), initials
         except Exception:
             return target.relative_to(ROOT).as_posix(), initials
-    local_path = (ROOT / avatar_ref).resolve() if not Path(avatar_ref).is_absolute() else Path(avatar_ref)
-    if local_path.exists():
-        try:
-            return local_path.relative_to(ROOT).as_posix(), initials
-        except ValueError:
-            return local_path.as_posix(), initials
     return None, initials
 
 
 def render_header(config: dict[str, Any], profile: dict[str, Any]) -> str:
+    name_raw = clean_markup(config.get("name", ""))
+    name_parts = [part for part in name_raw.split() if part]
+    default_initials = "".join(part[0].upper() for part in name_parts[:2]) or "CV"
     avatar_path, initials = maybe_download_avatar(config.get("avatar"))
+    initials = default_initials if initials == "CV" else initials
     avatar = (
         rf"\resumeAvatarAuto{{{avatar_path}}}{{{initials}}}"
         if avatar_path

@@ -1,26 +1,26 @@
-name: Zhu Enze
-title: Undergraduate Student
-position: Undergraduate Student
-affiliation: Xi'an Jiaotong University
-location: Xi'an, China
-phone: "+86 13092344080"
-email: jsxzznz@163.com
-tagline: Intelligent Systems, Software Engineering, and Embedded Development
+name: Clara Vale
+title: Ph.D. Candidate in Computer Science
+position: Ph.D. Candidate in Computer Science
+affiliation: Redwood Institute of Technology
+location: Cambridge, UK
+phone: "+44 20 7946 0321"
+email: clara.vale@rit-demo.edu
+tagline: Trustworthy Machine Learning, Scientific Imaging, and Human-Centered AI Systems
 
-google_scholar: https://scholar.google.com.hk/citations?hl=zh-CN&pli=1&user=t_HxDtcAAAAJ
-cv_link: https://lsqkk.github.io/academic-homepage/assets/files/Zhu_Enze_s_Resume_en_.pdf
-github_link: https://github.com/lsqkk/
-homepage_link: https://lsqkk.github.io
+google_scholar: https://scholar.google.com/citations?user=demo-clara-vale
+cv_link: https://example.edu/clara-vale/cv.pdf
+github_link: https://github.com/clara-vale-lab
+homepage_link: https://example.edu/clara-vale
 
 contact_links:
   - label: Homepage
-    url: https://lsqkk.github.io/academic-homepage
+    url: https://example.edu/clara-vale
   - label: GitHub
-    url: https://github.com/lsqkk/
+    url: https://github.com/clara-vale-lab
   - label: Google Scholar
-    url: https://scholar.google.com.hk/citations?hl=zh-CN&pli=1&user=t_HxDtcAAAAJ
+    url: https://scholar.google.com/citations?user=demo-clara-vale
   - label: CV
-    url: https://lsqkk.github.io/academic-homepage/assets/files/Zhu_Enze_s_Resume_en_.pdf
+    url: https://example.edu/clara-vale/cv.pdf
 
 theme:
   accent_color: "245C73"
@@ -31,13 +31,13 @@ section_visibility:
   education: true
   projects: true
   awards: true
-  publications: false
+  publications: true
   services: false
   skills: true
 
 list_preview_count:
-  projects: 2
-  awards: 2
-  publications: 2
+  projects: 4
+  awards: 3
+  publications: 3
 
-avatar: https://lsqkk.github.io/academic-homepage/assets/img/avatar.jpg
+avatar: ./Data/avatar.png

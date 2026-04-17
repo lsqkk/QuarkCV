@@ -1,41 +1,41 @@
 about:
-  lead: I am Zhu Enze, a 2025 undergraduate student in the School of Automation at Xi'an Jiaotong University and a member of the 2023 class of the Young Gifted Program.
-  summary: My focus lies at the intersection of intelligent systems and software engineering, with a proven ability to solve practical problems through independent development and project implementation. My interests span machine learning, embedded systems, and full-stack application development.
-  resume_summary: I am Zhu Enze, a 2025 undergraduate student in the School of Automation at Xi'an Jiaotong University and a member of the 2023 class of the Young Gifted Program, with interests spanning intelligent systems, machine learning, software engineering, and embedded development.
+  lead: I am Clara Vale, a Ph.D. candidate in Computer Science at the Redwood Institute of Technology, where I study reliable machine learning systems for scientific and medical imaging.
+  summary: My research sits at the intersection of trustworthy AI, multimodal representation learning, and human-centered research tooling. I enjoy building reproducible systems that connect methodological rigor with practical deployment in real-world scientific workflows.
+  resume_summary: Clara Vale is a Ph.D. candidate in Computer Science at the Redwood Institute of Technology working on trustworthy machine learning, scientific imaging, and human-centered AI systems, with experience spanning research, open-source tooling, and interdisciplinary collaboration.
   resume_focus:
-    - Intelligent systems
-    - Machine learning
-    - Software engineering
-    - Embedded development
-    - Full-stack applications
+    - Trustworthy machine learning
+    - Scientific imaging
+    - Multimodal representation learning
+    - Research software engineering
+    - Human-centered AI
   focus_areas:
-    - Intelligent systems
-    - Machine learning & Deep learning
-    - Software engineering
-    - Embedded development
-    - Full-stack applications
+    - Trustworthy machine learning
+    - Scientific imaging
+    - Multimodal learning
+    - Research software engineering
+    - Human-centered AI
 
 skills:
   - title: Programming Languages
     items:
-      - Python (data processing and machine learning)
-      - C / C++ (fundamental development)
-      - JS&TS / HTML / CSS / Astro (front-end development)
-      - Bash (Linux operations)
+      - Python (research pipelines and experimentation)
+      - C++ (high-performance inference tooling)
+      - Julia (scientific computing prototypes)
+      - SQL and Bash (data workflows and automation)
 
   - title: Frameworks & Tools
     items:
-      - TensorFlow / PyTorch / PaddlePaddle
-      - Linux, SSH, Git, Firebase, LaTeX
-      - Jekyll and static-site workflows
+      - PyTorch, MONAI, Hugging Face, scikit-learn
+      - Linux, Docker, Git, Weights and Biases, LaTeX
+      - DVC, Snakemake, and reproducible experiment workflows
 
   - title: Hardware & Platforms
     items:
-      - Arduino development fundamentals
-      - Orange Pi deployment and maintenance
-      - Practical Linux server operation
+      - GPU cluster experimentation
+      - Edge inference benchmarking
+      - Cloud training and deployment on AWS
 
   - title: Languages
     items:
-      - Chinese (Native)
-      - English (CET-6, proficient in reading academic literature)
+      - English (Native)
+      - German (Professional working proficiency)

@@ -1,38 +1,38 @@
 main:
-  - school: Xi'an Jiaotong University
-    program: Bachelor of Engineering in Automation
-    period: Sept. 2025 - Present
-    start_date: 2025-09-01
-    focus: Full undergraduate study in automation, intelligent systems, and engineering fundamentals.
-    resume_summary: Full undergraduate training in automation, control, software, and intelligent systems.
-    resume_highlights:
-      - Programming in C (100/100)
-      - Principles of Automatic Control
-      - Engineering Mathematics
-      - Intelligent Systems
-    summary: Currently pursuing formal undergraduate training with an emphasis on control, software, and interdisciplinary engineering practice.
-    link: https://automation.xjtu.edu.cn
-    highlights:
-      - Programming in C 100/100
-      - Principles of Automatic Control
-      - Engineering Mathematics
-      - Intelligent Systems
-
-  - school: Xi'an Jiaotong University
-    program: Young Gifted Program (Preparatory Phase)
-    period: Sept. 2023 - Jun. 2025
+  - school: Redwood Institute of Technology
+    program: Ph.D. in Computer Science
+    period: Sept. 2023 - Present
     start_date: 2023-09-01
-    focus: Accelerated preparatory training bridging advanced pre-college coursework and early undergraduate practice.
-    resume_summary: Accelerated preparatory training with early exposure to research, project practice, and competition-based learning.
+    focus: Doctoral research in reliable machine learning for scientific and medical imaging.
+    resume_summary: Doctoral research in trustworthy machine learning, multimodal imaging, and reproducible scientific software systems.
     resume_highlights:
-      - Early research training
-      - Project-based learning
-      - Competition experience
-      - Independent development
-    summary: Completed prerequisite coursework ahead of schedule, explored AI and software projects independently, maintained a technical blog, and built an early record in competitions and software copyrights.
-    link: https://bjb.xjtu.edu.cn/info/1071/1237.htm
+      - GPA 3.96 / 4.00
+      - NSF-style Graduate Research Fellowship nominee
+      - Research assistant in Vision and Learning Lab
+      - Teaching assistant for Machine Learning Systems
+    summary: Ongoing doctoral work focused on uncertainty estimation, imaging pipelines, and deployable research infrastructure.
+    link: https://example.edu/rit/computer-science
     highlights:
-      - Early research training
-      - Project-based learning
-      - Competition experience
-      - Independent development
+      - GPA 3.96 / 4.00
+      - Graduate fellowship nominee
+      - Vision and Learning Lab
+      - Teaching assistantship
+
+  - school: Northbridge University
+    program: B.S. in Biomedical Engineering, Minor in Statistics
+    period: Sept. 2019 - Jun. 2023
+    start_date: 2019-09-01
+    focus: Undergraduate training in biomedical engineering, data analysis, and computational modeling.
+    resume_summary: Undergraduate training in biomedical engineering, statistical learning, and computational imaging with strong interdisciplinary coursework.
+    resume_highlights:
+      - First Class Honours
+      - Undergraduate thesis with distinction
+      - Dean's List for six semesters
+      - Exchange semester in computational neuroscience
+    summary: Completed a research-oriented undergraduate program with projects spanning imaging, data modeling, and biosignal analysis.
+    link: https://example.edu/northbridge/biomedical-engineering
+    highlights:
+      - First Class Honours
+      - Thesis with distinction
+      - Dean's List
+      - Exchange semester

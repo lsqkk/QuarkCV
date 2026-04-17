@@ -1,25 +1,24 @@
 main:
+  - title: International Conference on Medical Image Computing and Computer-Assisted Intervention
+    date: 2025-09-20
+    award_description: Best Student Paper Finalist
+    reason: Recognized for first-author work on uncertainty-aware multimodal imaging models.
+    image: ./assets/img/award_miccai.png
 
-  - title: Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM)
-    date: 2025-05-01
-    award_description: Honorable Mention
-    reason: Responsible for mathematical model construction, paper writing, and data visualization.
-    image: ./assets/img/award_mcm.png
+  - title: Redwood Institute of Technology
+    date: 2025-04-18
+    award_description: Graduate Research Excellence Award
+    reason: Awarded for sustained research impact, open-source contributions, and interdisciplinary collaboration.
+    image: ./assets/img/award_research_excellence.png
 
-  - title: China Undergraduate Physics Experiment Competition
-    date: 2025-12-01
-    award_description: National First Prize (First Place in the Northwestern Division)
-    reason: Responsible for animation simulation and video production of core experimental phenomena.
-    image: ./assets/img/award_physics.jpg
+  - title: Society for Imaging Informatics Early Career Symposium
+    date: 2024-11-12
+    award_description: Outstanding Poster Award
+    reason: Honored for a poster on reproducible benchmarking in scientific imaging.
+    image: ./assets/img/award_poster.png
 
-  - title: Global Campus Artificial Intelligence Algorithm Elite Competition (AIC)
-    date: 2025-12-11
-    award_description: Provincial Third Prize
-    reason: Responsible for downloading, preprocessing, cleaning, and spatial interpolation of multimodal meteorological data.
-    image: ./assets/img/award_aic.png
-
-  - title: Xi'an Jiaotong University School-Level Scholarship
-    date: 2025-06-30
-    award_description: Third class scholarship at the school level
-    reason: Top 20% in comprehensive testing ranking.
-    image: ./assets/img/award_scholarship.png
+  - title: Northbridge University
+    date: 2023-06-30
+    award_description: Undergraduate Thesis Distinction
+    reason: Thesis received distinction for work on uncertainty estimation in biomedical signal models.
+    image: ./assets/img/award_thesis.png

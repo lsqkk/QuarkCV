@@ -1,22 +1,31 @@
 main:
-
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
+  - title: Uncertainty-Calibrated Multimodal Learning for Longitudinal MRI Progression Modeling
+    authors: Clara Vale, Miriam Chen, Daniel Orlov, Sofia Mendes, Thomas Avery
     conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2026.
+    pdf: https://arxiv.org/abs/2602.01234
+    code: https://github.com/clara-vale-lab/mri-foundation-demo
+    bibtex: https://example.edu/clara-vale/bib/miccai2026.txt
+    image: ./assets/img/paper_miccai2026.png
+    notes: First Author
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: Benchmarking Robustness and Reproducibility in Scientific Imaging Pipelines
+    authors: Clara Vale, Ethan Moore, Priya Raman, Helena Scott
+    conference_short: NeurIPS Datasets and Benchmarks
+    conference: Conference on Neural Information Processing Systems, Datasets and Benchmarks Track, 2025.
+    pdf: https://arxiv.org/abs/2510.04567
+    code: https://github.com/clara-vale-lab/trustworthy-imaging-bench
+    bibtex: https://example.edu/clara-vale/bib/neurips2025.txt
+    image: ./assets/img/paper_neurips2025.png
+    notes: Spotlight
+
+  - title: Human-in-the-Loop Annotation Interfaces for Foundation Models in Computational Pathology
+    authors: Clara Vale, Isabel Novak, Hannah Lee, Victor Stein
+    conference_short: CHI
+    conference: ACM Conference on Human Factors in Computing Systems (CHI), 2025.
+    pdf: https://arxiv.org/abs/2503.00890
+    code: https://github.com/clara-vale-lab/pathology-annotator
+    page: https://example.edu/clara-vale/pathology-annotation
+    bibtex: https://example.edu/clara-vale/bib/chi2025.txt
+    notes: Honorable Mention
+    image: ./assets/img/paper_chi2025.png

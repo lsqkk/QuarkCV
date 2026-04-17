@@ -1,85 +1,57 @@
 main:
-  - title: Serverless SVG Card Generator with Bilibili API Integration and Vercel Deployment
-    resume_title: Serverless SVG Card Generator
-    date: 2026-01-24
-    attribute: Open Source Project
-    description: A serverless-friendly SVG card generator for Bilibili user profiles. Implements a clean API that fetches user stats via Bilibili web endpoints, transforms data with sanitization and formatting, then renders responsive vector cards using template-based SVG composition. Features a decoupled theme-color system, automated text wrapping for bios/titles, parallel async fetching with built-in caching, and HTML escaping for XSS prevention. Deployed on Vercel as serverless functions with a fallback Python script for local testing.
-    resume_summary: Built a serverless SVG card generator for Bilibili profiles, covering data fetching, sanitization, template rendering, and deployment on Vercel.
-    tech_stack: JavaScript, Python, HTML/CSS, SVG templates, Vercel
-    image: ./assets/img/project_bili_card.png
-    link: https://github.com/lsqkk/bili-card
+  - title: Calibrated Multimodal Foundation Model for Longitudinal MRI Analysis
+    resume_title: Calibrated MRI Foundation Model
+    date: 2026-02-12
+    attribute: Doctoral Research Project
+    description: Led the design of a multimodal representation learning pipeline for longitudinal MRI studies, combining temporal alignment, uncertainty-aware prediction heads, and retrieval-augmented clinical metadata conditioning for robust disease progression modeling.
+    resume_summary: Led a multimodal foundation-model pipeline for longitudinal MRI analysis with calibration-aware prediction, temporal alignment, and clinical metadata fusion.
+    tech_stack: Python, PyTorch, MONAI, Hydra
+    outcome: Submitted as first-author work to a top-tier medical imaging venue.
+    image: ./assets/img/project_mri_foundation.png
+    link: https://github.com/clara-vale-lab/mri-foundation-demo
 
-  - title: Personal Server Deployment and Operation
-    resume_title: Personal Server Deployment and Operation
-    date: 2025-12-20
-    attribute: Open Source Project
-    description: Deployed and maintained a home server cluster on Orange Pi, stably running various services including Ollama (local large language model service), Nextcloud (private cloud storage), WordPress (website management), etc. Gained practical experience in Linux system administration, containerized application deployment, and intranet penetration techniques.
-    resume_summary: Deployed and maintained an Orange Pi home server cluster for AI, storage, and web services, gaining hands-on experience in Linux administration and containerized deployment.
-    tech_stack: Linux, Docker, Orange Pi
-    image: ./assets/img/project_orange_pi.png
-    link: https://github.com/lsqkk/OrangePi
+  - title: Reproducible Benchmark Suite for Trustworthy Scientific Imaging
+    resume_title: Trustworthy Imaging Benchmark Suite
+    date: 2025-10-08
+    attribute: Open Research Infrastructure
+    description: Built an end-to-end benchmark suite for evaluating robustness, calibration, and reproducibility across scientific imaging models, including versioned datasets, automated reports, and experiment lineage tracking.
+    resume_summary: Built a reproducible benchmark suite for robustness, calibration, and experiment tracking across scientific imaging models.
+    tech_stack: Python, DVC, Snakemake, Docker
+    outcome: Adopted internally by three collaborating research groups.
+    image: ./assets/img/project_benchmark_suite.png
+    link: https://github.com/clara-vale-lab/trustworthy-imaging-bench
 
-  - title: AI-Based Forest Fire Prediction Model
-    resume_title: AI-Based Forest Fire Prediction Model
-    date: 2025-12-01
-    attribute: AIC Competition Project
-    description: Responsible for the multimodal data preprocessing pipeline, specifically handling the download, cleaning, and spatial interpolation of ERA5 reanalysis meteorological data to provide structured input for subsequent CNN and large language model training, and made innovations based on the YingLong Model.
-    resume_summary: Built the multimodal meteorological data pipeline for a forest fire prediction project, including ERA5 download, cleaning, and spatial interpolation.
-    tech_stack: Python, PaddlePaddle
-    outcome: The project won a provincial third prize in the AIC competition.
-    image: ./assets/img/project_forest_fire.png
-    link: https://github.com/lsqkk/fire-risk
+  - title: Interactive Annotation Interface for Pathology Foundation Models
+    resume_title: Pathology Annotation Interface
+    date: 2025-05-20
+    attribute: Human-Centered AI Tooling
+    description: Developed a browser-based annotation interface that integrates model suggestions, uncertainty overlays, and structured reviewer feedback to support expert-in-the-loop pathology curation.
+    resume_summary: Developed an expert-in-the-loop annotation interface with uncertainty overlays and model-assisted review for pathology datasets.
+    tech_stack: TypeScript, React, FastAPI, PostgreSQL
+    outcome: Reduced average expert review time by 28 percent in pilot studies.
+    image: ./assets/img/project_pathology_ui.png
+    link: https://github.com/clara-vale-lab/pathology-annotator
 
-  - title: Serverless P2P File Transfer System
-    resume_title: Serverless P2P File Transfer System
-    date: 2025-10-01
-    attribute: Personal Blog Service
-    description: To overcome the limitation of lacking a dedicated signaling server, I established a signaling channel using Firebase Realtime Database. Combined with WebRTC technology and public STUN servers, this system enabled direct peer-to-peer file transfer between browsers.
-    resume_summary: Implemented browser-to-browser file transfer with WebRTC and Firebase Realtime Database, avoiding the need for a dedicated signaling server.
-    tech_stack: JavaScript (WebRTC API), Firebase
-    link: https://lsqkk.github.io/a/share
-    image: ./assets/img/project_p2p_file.png
+  - title: Self-Supervised Microscopy Representation Learning for Low-Label Regimes
+    resume_title: Self-Supervised Microscopy Learning
+    date: 2024-11-03
+    attribute: Research Collaboration
+    description: Investigated self-supervised pretraining strategies for fluorescence microscopy under scarce-label settings, comparing contrastive, masked reconstruction, and clustering-based objectives across multiple acquisition domains.
+    resume_summary: Studied self-supervised pretraining for fluorescence microscopy and compared representation objectives under scarce-label conditions.
+    tech_stack: Python, PyTorch Lightning, NumPy
+    outcome: Produced a reusable pretraining recipe for follow-up lab projects.
+    image: ./assets/img/project_microscopy_ssl.png
+    link: https://github.com/clara-vale-lab/microscopy-ssl
 
-  - title: Cross-Platform PPT Remote Control Tool
-    resume_title: Cross-Platform PPT Remote Control Tool
-    date: 2025-09-01
-    attribute: Open Source Project
-    description: Designed and implemented a lightweight remote control solution based on web and local bridge programs. Utilized Firebase for real-time signaling synchronization and employed a local Node.js script to parse commands and simulate keyboard events, enabling seamless control of PC-side PPT presentations from a mobile device.
-    resume_summary: Designed a lightweight PPT remote-control workflow using Firebase signaling and a local Node.js bridge to simulate presentation commands.
-    tech_stack: JavaScript, Node.js, Firebase Realtime Database
-    link: https://github.com/lsqkk/ppt-remote
-    image: ./assets/img/project_ppt_remote.png
-
-  - title: Personal Independent Blog Development
-    resume_title: Personal Independent Blog Development
-    date: 2025-02-01
-    description: Designed, developed from scratch, and continuously maintain a static blog system for sharing technical notes and project summaries. The system achieves zero server backend deployment, with all code open-sourced. The site has obtained a software copyright.
-    resume_summary: Built and maintained a fully static personal technical blog with zero-backend deployment and open-sourced code.
-    tech_stack: JavaScript, HTML/CSS, Jekyll
-    link: https://lsqkk.github.io/
-    image: ./assets/img/project_blog.png
-
-  - title: U-Transformer Architecture for Meteorological Prediction
-    resume_title: U-Transformer for Meteorological Prediction
-    date: 2024-06-02
-    attribute: YGP Preparatory AI Course Project
-    description: Contributed to partial code development for a weather forecasting model based on a U-Transformer structure. The design integrates strengths from both Pangu and Fuxi large weather models, implemented using the domestic PaddlePaddle deep learning framework to support efficient spatial-temporal prediction.
-    resume_summary: Contributed to a PaddlePaddle-based U-Transformer weather forecasting prototype for multi-step spatial-temporal prediction.
-    tech_stack: Python, PaddlePaddle, NumPy
-    outcome: Functional prototype for multi-step meteorological variable forecasting.
-    image: ./assets/img/project_weather_prediction.png
-    link: ./assets/files/基于U-transformer架构的人工智能气象预测.ERQI CHEN, ENZE ZHU, TIAN HAO.pdf
-
-  - title: CNN-based Animal Recognition System
-    resume_title: CNN-Based Animal Recognition System
-    date: 2024-06-01
-    attribute: YGP Preparatory AI Course Project
-    description: Responsible for dataset downloading, preprocessing, and final reporting. The innovation lies in training the CNN from scratch without freezing earlier layers, along with introducing improvements in pooling strategies and cosine annealing scheduling to enhance convergence and accuracy.
-    resume_summary: Handled dataset preparation, experiment reporting, and training optimization for a CNN-based animal recognition course project.
-    tech_stack: Python, PyTorch, OpenCV
-    outcome: Course project submitted with full pipeline documentation and performance analysis.
-    image: ./assets/img/project_animal_recognition.png
-    link: ./assets/files/基于卷积神经网络(CNN)的动物识别.XINRAN DAI, ENZE ZHU, JIEMING ZHANG.pdf
-
+  - title: Privacy-Preserving Federated Learning for Retinal Screening
+    resume_title: Federated Retinal Screening
+    date: 2024-04-14
+    attribute: Collaborative Research Project
+    description: Implemented a federated training prototype for retinal image screening across simulated partner hospitals, focusing on secure aggregation, domain shift, and cross-site calibration.
+    resume_summary: Implemented a federated retinal screening prototype with secure aggregation and cross-site calibration analysis.
+    tech_stack: Python, Flower, PyTorch, Opacus
+    outcome: Internal pilot demonstrated stable performance under non-IID site distributions.
+    image: ./assets/img/project_federated_retina.png
+    link: https://github.com/clara-vale-lab/federated-retina
 
 
